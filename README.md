@@ -1,3 +1,2 @@
-# Algorithms
-Fun Algorithm Projects
-Georgia Tech: Reuse Distance Algorithm
+# Fun Algorithm Projects/Scripts
+* Georgia Tech: Reuse Distance Algorithm
