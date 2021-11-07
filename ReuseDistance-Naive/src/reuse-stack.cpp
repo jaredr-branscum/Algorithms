@@ -11,6 +11,17 @@ using namespace std;
 static int INFINITE_DISTANCE = -1;
 
 /*
+* Test Function for troubleshooting int vector
+*/
+void printIntVector(vector<int> vector)
+{
+    for (int i = 0; i < vector.size(); i++)
+    {
+        cout << vector[i] << ", ";
+    }
+}
+
+/*
 * Add the reuse distance result to the histogram
 */
 void AddReuseDistance(vector<int>& histogram, int reuseDistance)
@@ -24,24 +35,13 @@ void AddReuseDistance(vector<int>& histogram, int reuseDistance)
 * 2. reinserting the memoryLocations above it back onto the stack
 * 3. pushing the memoryLocation on top of the stack
 */
-void popAndPushMemoryAddressBackOntoStack (vector<int>& stack, int memoryLocation)
+void popAndPushMemoryAddressBackOntoStack (vector<int>& stack, vector<int> distinctLocations, int memoryLocation)
 {
-    vector<int> distinctLocations;
     stack.pop_back();
     reverse(distinctLocations.begin(),distinctLocations.end());
     stack.insert(stack.end(), distinctLocations.begin(), distinctLocations.end());
     stack.push_back(memoryLocation);
-}
-
-/*
-* Test Function for troubleshooting int vector
-*/
-void printIntVector(vector<int> vector)
-{
-    for (int i = 0; i < vector.size(); i++)
-    {
-        cout << vector[i] << ", ";
-    }
+    //cout << "stack after push back: "; printIntVector(stack);cout<<endl;
 }
 
 /*
@@ -63,7 +63,7 @@ int CalculateReuseDistance(int memoryLocation, vector<int>& stack)
             distinctLocations.push_back(stack.back());
             stack.pop_back();
         }
-        popAndPushMemoryAddressBackOntoStack(stack, memoryLocation);
+        popAndPushMemoryAddressBackOntoStack(stack, distinctLocations, memoryLocation);
         return count;
     }
 

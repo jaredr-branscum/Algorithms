@@ -136,8 +136,10 @@ void verifyNormalReuseHistogram(vector<int> dataset)
     vector<int> histogram;
     for (unsigned int i = 0; i < dataset.size(); i++)
     {
-        reuse.push_back(CalculateReuseDistance(dataset[i], stack));
+        int reuseValue = CalculateReuseDistance(dataset[i], stack);
+        AddReuseDistance(reuse, reuseValue);
     }
+    cout << "Reuse vector is: ";printIntVector(reuse);cout << endl;
     histogram = CreateHistogram(reuse);
     PrintHistogram(histogram);
 }
@@ -173,5 +175,3 @@ int main()
     verifyNormalReuseHistogram(dataset4);
     verifyNormalReuseHistogram(dataset5);
 }
-
-
