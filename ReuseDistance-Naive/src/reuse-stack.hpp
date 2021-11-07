@@ -4,7 +4,8 @@
 using namespace std;
 
 void AddReuseDistance(vector<int>&, int);
-int CalculateReuseDistance(int, int, vector<int>&, vector<int>&);
-void PrintHistogram(vector<int>);
+int CalculateReuseDistance(int, vector<int>&);
+vector<int> CreateHistogram(vector<int>);
+void printIntVector(vector<int>);
 
 #endif

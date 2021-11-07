@@ -49,7 +49,7 @@ void printIntVector(vector<int> vector)
 * Removes that memory address from the stack if it exists and pushes that memory address back on top of the stack, preserving the order of the rest of the stack
 * Returns reuse distance
 */
-int CalculateReuseDistance(int memoryLocation, int time, vector<int>& stack, vector<int>& histogram)
+int CalculateReuseDistance(int memoryLocation, vector<int>& stack)
 {
     vector<int>::iterator found = std::find(stack.begin(), stack.end(), memoryLocation);
     
@@ -77,9 +77,9 @@ int CalculateReuseDistance(int memoryLocation, int time, vector<int>& stack, vec
 /*
 * Receives the reuse distances that were counted
 * Structures the collection into a readable histogram
-* Prints the histogram results onto the cout filestream
+* Creates histogram vector
 */
-void PrintHistogram(vector<int> reuse)
+vector<int> CreateHistogram(vector<int> reuse)
 {
 	sort(reuse.begin(), reuse.end());
 	vector<int> histogram;
@@ -111,12 +111,5 @@ void PrintHistogram(vector<int> reuse)
 		}	
 	}
 
-    cout << "Histogram Printing" << endl;
-    cout << setw(25) << "Reuse Distance: infinity" << " Count: " << histogram[0] << endl;
-    std::cout << setw(25) << "Reuse Distance: 0" << " Count: " << histogram[1] << endl;
-
-    for (unsigned int i = 2; i < histogram.size(); i++)
-	{
-		cout << setw(25) << "Reuse Distance: " << i - 1 <<  " Count: " << histogram[i] << endl;
-	}
+    return histogram;
 }
