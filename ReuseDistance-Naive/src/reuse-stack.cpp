@@ -41,7 +41,6 @@ void popAndPushMemoryAddressBackOntoStack (vector<int>& stack, vector<int> disti
     reverse(distinctLocations.begin(),distinctLocations.end());
     stack.insert(stack.end(), distinctLocations.begin(), distinctLocations.end());
     stack.push_back(memoryLocation);
-    //cout << "stack after push back: "; printIntVector(stack);cout<<endl;
 }
 
 /*
@@ -55,16 +54,16 @@ int CalculateReuseDistance(int memoryLocation, vector<int>& stack)
     
     if( found != stack.end()) //found in the stack
     {
-        int count = 0;
+        int reuseDistance = 0;
         vector<int> distinctLocations;
         while (memoryLocation != stack.back())
         {
-            count++;
+            reuseDistance++;
             distinctLocations.push_back(stack.back());
             stack.pop_back();
         }
         popAndPushMemoryAddressBackOntoStack(stack, distinctLocations, memoryLocation);
-        return count;
+        return reuseDistance;
     }
 
     else //not found in the stack
