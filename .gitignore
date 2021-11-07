@@ -6,3 +6,4 @@ ReuseDistance-Naive/reuse-tree.cpp
 *.pdb
 *.obj
 *.ilk
+.vscode/c_cpp_properties.json
