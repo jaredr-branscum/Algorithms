@@ -38,8 +38,8 @@ Reuse Distance: infinity Count: 3
 Inside the tests directory, the reuse-stack-unit.exe executable runs the unit tests for the reuse-stack algorithm
 
 # Future Work
-Release tree-based O(logN) solution with unit tests or it can be left as an exercise for the reader :)
-Build usable static and dynamic library for public use
-Refactor code to work with various data types besides integers, consider implementing templates
-Refactor code to work with various dataset formats
+* Release tree-based O(logN) solution with unit tests or it can be left as an exercise for the reader :)
+* Build usable static and dynamic library for public use
+* Refactor code to work with various data types besides integers, consider implementing templates
+* Refactor code to work with various dataset formats
 
