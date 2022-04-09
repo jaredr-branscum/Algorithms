@@ -4,6 +4,7 @@ Input: Given a Map Data Structure Map<string, HobbyProfile> where the key is the
 Output: Return a data structure that is composed of each unique hobby with the total sum of each person's budget towards that hobby along with a field containing the sum of everyone's hobbies
 
 Time Complexity: O(N * M) where N = number of key value pairs in the map and M = the size of HobbyProfile's array of Hobbies
+
 Space Complexity: O(N * M) where N = number of key value pairs in the map and M = the size of HobbyProfile's array of Hobbies
 
 HobbyProfile: A data structure that has the following properties:
