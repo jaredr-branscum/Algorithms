@@ -1,5 +1,5 @@
 # Aggregate Map Data Matches
-Input: Given a Map Data Structure Map<string, HobbyProfile> where the key is the string representation of a person's unique identifier (i.e. SSN, etc.) and the value pair represents that person's profile of hobbies.
+Input: Given a Map Data Structure Map<string, HobbyProfile> where the key is the string representation of a person's unique identifier (i.e. SSN, etc.) and the value pair represents that person's profile of hobbies
 
 Output: Return a data structure that is composed of each unique hobby with the total sum of each person's budget towards that hobby along with a field containing the sum of everyone's hobbies
 
