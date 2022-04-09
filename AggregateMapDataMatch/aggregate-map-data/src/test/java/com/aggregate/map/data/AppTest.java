@@ -12,11 +12,9 @@ import org.junit.Test;
 /**
  * Unit Test File
  */
-public class AppTest 
-{
+public class AppTest {
     @Test
-    public void returnEmptyHobbyReport()
-    {
+    public void returnEmptyHobbyReport() {
         HobbyReport report = new HobbyReport();
         Map<String, HobbyProfile> emptyMap = new HashMap<String, HobbyProfile>();
         HobbyReport result = App.generateHobbyReport(emptyMap);
@@ -25,8 +23,7 @@ public class AppTest
     }
 
     @Test
-    public void compareNonEqualReports()
-    {
+    public void compareNonEqualReports() {
         HobbyReport report = new HobbyReport();
         report.totalHobbies = new ArrayList<String>();
         report.totalHobbies.add("VideoGames");
