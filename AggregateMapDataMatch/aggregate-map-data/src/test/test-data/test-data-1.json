@@ -1,0 +1,14 @@
+{
+    "personId": "123-456-7890",
+    "HobbyProfile": {
+        "HobbyBudget": [
+            {
+                "hobby": "Skateboarding",
+                "budget": 150.0
+            }
+        ],
+        "Hobbies": [
+            "Skateboarding"
+        ]
+    }
+}
