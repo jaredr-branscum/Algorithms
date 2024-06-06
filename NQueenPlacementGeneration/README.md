@@ -1,7 +1,7 @@
 # N Queen Problem Placement Generation Algorithm
 Input: integer *N* for *N* x *N* board
 
-Output: Return the # of all possible placements of *N* objects on *N* x *N* board
+Output: Return all possible placements of *N* objects on *N* x *N* board
 
 Time Complexity: O( 2 <sup>*N*<sup> 2</sup></sup> ) where *N* = dimensions of the board and number of objects placed on the board
 
